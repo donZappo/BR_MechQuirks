@@ -42,7 +42,7 @@ namespace BR_MechQuirks
             if (!Core.Settings.Debug) return;
             using (var writer = new StreamWriter(LogFilePath, false))
             {
-                writer.WriteLine($"{DateTime.Now.ToLongTimeString()} Galaxy-at-War Init");
+                writer.WriteLine($"{DateTime.Now.ToLongTimeString()} BR_MechQuirks Init");
             }
         }
     }
