@@ -7,5 +7,7 @@ namespace BR_MechQuirks
     {
         public bool Debug = false;
         public string modDirectory;
+
+        public float CommandoBonusDamage = 1.5f;
     }
 }

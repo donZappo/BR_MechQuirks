@@ -76,6 +76,7 @@
     <Compile Include="Core.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModSettings.cs" />
+    <Compile Include="Patches\Weapon_DamagePerShot.cs" />
     <Compile Include="SaveHandling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
