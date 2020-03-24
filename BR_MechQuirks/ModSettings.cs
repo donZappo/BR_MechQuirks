@@ -9,5 +9,6 @@ namespace BR_MechQuirks
         public string modDirectory;
 
         public float CommandoBonusDamage = 1.5f;
+        public int MongooseLaserAccuracy = -5;
     }
 }
