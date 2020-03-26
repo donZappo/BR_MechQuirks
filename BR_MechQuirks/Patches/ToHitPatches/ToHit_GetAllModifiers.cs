@@ -39,6 +39,8 @@ namespace BR_MechQuirks.Patches
 
                 if (targetName == "UrbanMech")
                     __result += (float)Core.Settings.UrbieToBeHitPenalty;
+                if (targetName == "UrbanMech")
+                    __result += (float)Core.Settings.IntimidatingToBeHitPenalty;
             }
         }
     }

@@ -42,6 +42,8 @@ namespace BR_MechQuirks.Patches
 
                 if (targetName == "UrbanMech")
                     __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.UrbieToBeHitPenalty);
+                if (targetName == "Huron Warrior")
+                    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
             }
         }
     }

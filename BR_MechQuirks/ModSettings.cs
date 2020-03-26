@@ -24,5 +24,6 @@ namespace BR_MechQuirks
         public float BlackjackAC2DamageBonus = 4;
         public float GenericDesignRefitFactor = 0.5f;
         public int BombardResolvePenalty = -2;
+        public float IntimidatingToBeHitPenalty = 1;
     }
 }
