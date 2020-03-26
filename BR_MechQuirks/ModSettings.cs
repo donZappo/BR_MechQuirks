@@ -13,11 +13,13 @@ namespace BR_MechQuirks
         public float SRMAccuracyBoost = -4;
         public float UrbieToBeHitPenalty = 3;
         public float ValkyrieSpotterBonus = 150;
-        public float HollanderRefireBonus = 2;
+        public float HollanderRefireBonus = -2;
         public float FirestarterHeatBonus = 3;
         public float PantherPPCDamageBonus = 10;
         public float PantherPPCHeatPenalty = 5;
         public float WolfhoundEnergyBonus = -2;
         public float WolfhoundNonEnergyPenalty = 2;
+        public int CicadaInitiativeBonus = 2;
+        public float ClintAutocannonBonus = -4;
     }
 }

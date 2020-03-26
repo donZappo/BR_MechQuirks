@@ -32,6 +32,8 @@ namespace BR_MechQuirks.Patches
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.WolfhoundEnergyBonus);
                 if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category != WeaponCategory.Energy)
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.WolfhoundNonEnergyPenalty);
+                if (mechTags.Contains("BR_MQ_Clint") && weapon.Type == WeaponType.Autocannon)
+                    __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.ClintAutocannonBonus);
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;
