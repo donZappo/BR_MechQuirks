@@ -77,6 +77,7 @@
     <Compile Include="Core.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModSettings.cs" />
+    <Compile Include="Patches\Mech_AddAbsoluteInstability.cs" />
     <Compile Include="Patches\Weapon_MaxRange.cs" />
     <Compile Include="Patches\Mech_DamageLocation.cs" />
     <Compile Include="Patches\Team_CollectUnitBaseline.cs" />

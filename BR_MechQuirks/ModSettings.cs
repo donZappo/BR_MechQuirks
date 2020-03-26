@@ -29,5 +29,6 @@ namespace BR_MechQuirks
         public float ArmourBaffleFactor = 0.5f;
         public float NARCMaxRangeIncrease = 150.0f;
         public float OmniRefitFactor = 0.0f;
+        public float DragonInstabilityFactor = 0.75f;
     }
 }
