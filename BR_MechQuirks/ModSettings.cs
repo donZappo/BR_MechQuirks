@@ -21,5 +21,6 @@ namespace BR_MechQuirks
         public float WolfhoundNonEnergyPenalty = 2;
         public float ClintAutocannonBonus = -4;
         public float VulcanVehicleBonus = -5;
+        public float BlackjackAC2DamageBonus = 4;
     }
 }

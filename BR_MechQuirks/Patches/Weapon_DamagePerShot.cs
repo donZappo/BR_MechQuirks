@@ -23,6 +23,8 @@ namespace BR_MechQuirks.Patches
                     __result += Core.Settings.PantherPPCDamageBonus;
                 if (mechTags.Contains("BR_MQ_Panther") && __instance.WeaponSubType == WeaponSubType.PPCSnub)
                     __result += Core.Settings.PantherPPCDamageBonus / __instance.ProjectilesPerShot;
+                if (mechTags.Contains("BR_MQ_Blackjack") && __instance.WeaponSubType == WeaponSubType.AC2)
+                    __result += Core.Settings.BlackjackAC2DamageBonus;
             }
         }
     }
