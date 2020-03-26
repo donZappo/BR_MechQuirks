@@ -23,5 +23,6 @@ namespace BR_MechQuirks
         public float VulcanVehicleBonus = -5;
         public float BlackjackAC2DamageBonus = 4;
         public float VindicatorRefitFactor = 0.5f;
+        public int BombardResolvePenalty = -2;
     }
 }
