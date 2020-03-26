@@ -19,8 +19,8 @@ namespace BR_MechQuirks.Patches
 
                 if (__result != 0)
                 {
-                    if (mechTags.Contains("BR_MQ_Hollander"))
-                        __result += Core.Settings.HollanderRefireBonus;
+                    if (mechTags.Contains("BR_MQ_RecoilCompensator"))
+                        __result += Core.Settings.RecoilCompensator;
                     __result = Math.Max(0, __result);
                 }
             }
