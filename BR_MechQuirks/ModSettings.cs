@@ -27,5 +27,6 @@ namespace BR_MechQuirks
         public float IntimidatingToBeHitPenalty = 1;
         public float BushwackerHSComponentFactor = 1.5f;
         public float ArmourBaffleFactor = 0.5f;
+        public float NARCMaxRangeIncrease = 150.0f;
     }
 }
