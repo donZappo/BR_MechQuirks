@@ -31,6 +31,8 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.WolfhoundNonEnergyPenalty;
                 if (mechTags.Contains("BR_MQ_Clint") && weapon.Type == WeaponType.Autocannon)
                     __result += (float)Core.Settings.ClintAutocannonBonus;
+                if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
+                    __result += (float)Core.Settings.VulcanVehicleBonus;
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;

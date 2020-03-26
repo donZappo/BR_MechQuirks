@@ -19,7 +19,7 @@ namespace BR_MechQuirks
         public float PantherPPCHeatPenalty = 5;
         public float WolfhoundEnergyBonus = -2;
         public float WolfhoundNonEnergyPenalty = 2;
-        public int CicadaInitiativeBonus = 2;
         public float ClintAutocannonBonus = -4;
+        public float VulcanVehicleBonus = -5;
     }
 }

@@ -32,7 +32,10 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.WolfhoundNonEnergyPenalty).GetValue();
                 if (mechTags.Contains("BR_MQ_Clint") && __instance.DisplayedWeapon.Type == WeaponType.Autocannon)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.ClintAutocannonBonus).GetValue();
+                if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.VulcanVehicleBonus).GetValue();
 
+                
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;
 
