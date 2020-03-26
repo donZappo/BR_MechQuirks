@@ -26,6 +26,10 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && __instance.DisplayedWeapon.Type == WeaponType.SRM)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.SRMAccuracyBoost).GetValue();
+                if (mechTags.Contains("BR_MQ_Wolfhound") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Energy)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.WolfhoundEnergyBonus).GetValue();
+                if (mechTags.Contains("BR_MQ_Wolfhound") && __instance.DisplayedWeapon.weaponDef.Category != WeaponCategory.Energy)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.WolfhoundNonEnergyPenalty).GetValue();
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;

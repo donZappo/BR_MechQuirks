@@ -77,7 +77,7 @@
     <Compile Include="Core.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModSettings.cs" />
-    <Compile Include="Patches\ToHitPatches\Class1.cs" />
+    <Compile Include="Patches\Weapon_HeatGenerated.cs" />
     <Compile Include="Patches\Weapon_HeatDamagePerShot.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_RefireModifier.cs" />
     <Compile Include="Patches\LOS_GetAllSpotterAbsolutes.cs" />

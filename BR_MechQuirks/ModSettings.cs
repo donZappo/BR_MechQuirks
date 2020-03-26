@@ -9,13 +9,15 @@ namespace BR_MechQuirks
         public string modDirectory;
 
         public float CommandoBonusDamage = 1.5f;
-        public int MongooseLaserAccuracy = -5;
-        public int SRMAccuracyBoost = -4;
-        public int UrbieToBeHitPenalty = 3;
-        public int ValkyrieSpotterBonus = 150;
-        public int HollanderRefireBonus = 2;
-        public int FirestarterHeatBonus = 3;
+        public float MongooseLaserAccuracy = -5;
+        public float SRMAccuracyBoost = -4;
+        public float UrbieToBeHitPenalty = 3;
+        public float ValkyrieSpotterBonus = 150;
+        public float HollanderRefireBonus = 2;
+        public float FirestarterHeatBonus = 3;
         public float PantherPPCDamageBonus = 10;
         public float PantherPPCHeatPenalty = 5;
+        public float WolfhoundEnergyBonus = -2;
+        public float WolfhoundNonEnergyPenalty = 2;
     }
 }

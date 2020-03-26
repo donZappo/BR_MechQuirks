@@ -25,6 +25,10 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.MongooseLaserAccuracy;
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)
                     __result += (float)Core.Settings.SRMAccuracyBoost;
+                if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category == WeaponCategory.Energy)
+                    __result += (float)Core.Settings.WolfhoundEnergyBonus;
+                if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category != WeaponCategory.Energy)
+                    __result += (float)Core.Settings.WolfhoundNonEnergyPenalty;
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;
