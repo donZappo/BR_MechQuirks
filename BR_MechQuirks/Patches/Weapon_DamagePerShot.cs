@@ -16,13 +16,12 @@ namespace BR_MechQuirks.Patches
             public static void Postfix(Weapon __instance, ref float __result)
             {
                 var mechTags = __instance.parent.GetTags();
-
                 if (mechTags.Contains("BR_MQ_Commando") && __instance.LocationDef.Location == ChassisLocations.RightArm)
                     __result *= Core.Settings.CommandoBonusDamage;
-                if (mechTags.Contains("BR_MQ_Panther") && (__instance.WeaponSubType == WeaponSubType.PPC || __instance.WeaponSubType == WeaponSubType.PPCER))
-                    __result += Core.Settings.PantherPPCDamageBonus;
-                if (mechTags.Contains("BR_MQ_Panther") && __instance.WeaponSubType == WeaponSubType.PPCSnub)
-                    __result += Core.Settings.PantherPPCDamageBonus / __instance.ProjectilesPerShot;
+                if (mechTags.Contains("BR_MQ_PPCInputLag") && (__instance.WeaponSubType == WeaponSubType.PPC || __instance.WeaponSubType == WeaponSubType.PPCER))
+                    __result += Core.Settings.PPCInputLagDamageBonus;
+                if (mechTags.Contains("BR_MQ_PPCInputLag") && __instance.WeaponSubType == WeaponSubType.PPCSnub)
+                    __result += Core.Settings.PPCInputLagDamageBonus / __instance.ProjectilesPerShot;
                 if (mechTags.Contains("BR_MQ_Blackjack") && __instance.WeaponSubType == WeaponSubType.AC2)
                     __result += Core.Settings.BlackjackAC2DamageBonus;
             }

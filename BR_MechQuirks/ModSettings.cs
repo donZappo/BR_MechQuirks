@@ -15,8 +15,8 @@ namespace BR_MechQuirks
         public float ValkyrieSpotterBonus = 150;
         public float RecoilCompensator = -2;
         public float FirestarterHeatBonus = 3;
-        public float PantherPPCDamageBonus = 10;
-        public float PantherPPCHeatPenalty = 5;
+        public float PPCInputLagDamageBonus = 10;
+        public float PPCInputLagHeatPenalty = 5;
         public float WolfhoundEnergyBonus = -2;
         public float WolfhoundNonEnergyPenalty = 2;
         public float ClintAutocannonBonus = -4;
@@ -26,5 +26,6 @@ namespace BR_MechQuirks
         public int BombardResolvePenalty = -2;
         public float IntimidatingToBeHitPenalty = 1;
         public float BushwackerHSComponentFactor = 1.5f;
+        public float ArmourBaffleFactor = 0.5f;
     }
 }

@@ -17,8 +17,8 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = __instance.parent.GetTags();
 
-                if (mechTags.Contains("BR_MQ_Panther") && __instance.Type == WeaponType.PPC)
-                    __result += Core.Settings.PantherPPCHeatPenalty * __instance.combat.Constants.Heat.GlobalHeatIncreaseMultiplier * 
+                if (mechTags.Contains("BR_MQ_PPCInputLag") && __instance.Type == WeaponType.PPC)
+                    __result += Core.Settings.PPCInputLagHeatPenalty * __instance.combat.Constants.Heat.GlobalHeatIncreaseMultiplier * 
                         ((__instance.parent == null) ? 1f : __instance.parent.StatCollection.GetValue<float>("WeaponHeatMultiplier"));
             }
         }

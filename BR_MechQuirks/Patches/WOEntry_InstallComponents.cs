@@ -10,7 +10,9 @@ namespace BR_MechQuirks.Patches
 {
     class MechComponent_Refit
     {
-        [HarmonyPatch(typeof(WorkOrderEntry_InstallComponent), "WorkOrderEntry_InstallComponent")]
+        [HarmonyPatch(typeof(WorkOrderEntry_InstallComponent))]
+        [HarmonyPatch(MethodType.Constructor, new Type[] { typeof(string), typeof(string), typeof(string), typeof(MechComponentRef), typeof(int),
+            typeof(string), typeof(ChassisLocations), typeof(ChassisLocations), typeof(int), typeof(int), typeof(string) })]
         public static class WorkOrderEntry_InstallComponent_WorkOrderEntry_InstallComponent_Patch
         {
             public static void Prefix(WorkOrderEntry_InstallComponent __instance, ref int techCost, ref int cbillCost)
