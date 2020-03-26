@@ -25,5 +25,6 @@ namespace BR_MechQuirks
         public float GenericDesignRefitFactor = 0.5f;
         public int BombardResolvePenalty = -2;
         public float IntimidatingToBeHitPenalty = 1;
+        public float BushwackerHSComponentFactor = 1.5f;
     }
 }

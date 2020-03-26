@@ -23,6 +23,11 @@ namespace BR_MechQuirks.Patches
                     techCost = (int)(techCost * Core.Settings.GenericDesignRefitFactor);
                     cbillCost = (int)(cbillCost * Core.Settings.GenericDesignRefitFactor);
                 }
+                if (mechTags.Contains("BR_MQ_Bushwacker") && __instance.ComponentType == ComponentType.HeatSink)
+                {
+                    techCost = (int)(techCost * Core.Settings.BushwackerHSComponentFactor);
+                    cbillCost = (int)(cbillCost * Core.Settings.BushwackerHSComponentFactor);
+                }
             }
         }
     }
