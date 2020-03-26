@@ -15,8 +15,14 @@ namespace BR_MechQuirks.Patches
         {
             public static void Postfix(Weapon __instance, ref float __result)
             {
-                if (__instance.parent.GetTags().Contains("BR_MQ_Commando") && __instance.LocationDef.Location == ChassisLocations.RightArm)
+                var mechTags = __instance.parent.GetTags();
+
+                if (mechTags.Contains("BR_MQ_Commando") && __instance.LocationDef.Location == ChassisLocations.RightArm)
                     __result *= Core.Settings.CommandoBonusDamage;
+                if (mechTags.Contains("BR_MQ_Panther") && (__instance.WeaponSubType == WeaponSubType.PPC || __instance.WeaponSubType == WeaponSubType.PPCER))
+                    __result += Core.Settings.PantherPPCDamageBonus;
+                if (mechTags.Contains("BR_MQ_Panther") && __instance.WeaponSubType == WeaponSubType.PPCSnub)
+                    __result += Core.Settings.PantherPPCDamageBonus / __instance.ProjectilesPerShot;
             }
         }
     }

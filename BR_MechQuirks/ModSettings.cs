@@ -15,5 +15,7 @@ namespace BR_MechQuirks
         public int ValkyrieSpotterBonus = 150;
         public int HollanderRefireBonus = 2;
         public int FirestarterHeatBonus = 3;
+        public float PantherPPCDamageBonus = 10;
+        public float PantherPPCHeatPenalty = 5;
     }
 }
