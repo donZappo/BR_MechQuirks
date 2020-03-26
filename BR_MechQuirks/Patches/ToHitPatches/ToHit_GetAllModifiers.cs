@@ -25,10 +25,10 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.MongooseLaserAccuracy;
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)
                     __result += (float)Core.Settings.SRMAccuracyBoost;
-                if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category == WeaponCategory.Energy)
-                    __result += (float)Core.Settings.WolfhoundEnergyBonus;
-                if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category != WeaponCategory.Energy)
-                    __result += (float)Core.Settings.WolfhoundNonEnergyPenalty;
+                if (mechTags.Contains("BR_MQ_EnergySpecialization") && weapon.weaponDef.Category == WeaponCategory.Energy)
+                    __result += (float)Core.Settings.EnergySpecializationBonus;
+                if (mechTags.Contains("BR_MQ_EnergySpecialization") && weapon.weaponDef.Category != WeaponCategory.Energy)
+                    __result += (float)Core.Settings.EnergySpecializationPenalty;
                 if (mechTags.Contains("BR_MQ_Clint") && weapon.Type == WeaponType.Autocannon)
                     __result += (float)Core.Settings.ClintAutocannonBonus;
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)

@@ -17,8 +17,8 @@ namespace BR_MechQuirks
         public float FirestarterHeatBonus = 3;
         public float PPCInputLagDamageBonus = 10;
         public float PPCInputLagHeatPenalty = 5;
-        public float WolfhoundEnergyBonus = -2;
-        public float WolfhoundNonEnergyPenalty = 2;
+        public float EnergySpecializationBonus = -2;
+        public float EnergySpecializationPenalty = 2;
         public float ClintAutocannonBonus = -4;
         public float VulcanVehicleBonus = -5;
         public float BlackjackAC2DamageBonus = 4;

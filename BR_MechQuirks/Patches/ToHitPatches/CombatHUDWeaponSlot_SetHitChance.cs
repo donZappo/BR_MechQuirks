@@ -26,10 +26,10 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && __instance.DisplayedWeapon.Type == WeaponType.SRM)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.SRMAccuracyBoost).GetValue();
-                if (mechTags.Contains("BR_MQ_Wolfhound") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Energy)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.WolfhoundEnergyBonus).GetValue();
-                if (mechTags.Contains("BR_MQ_Wolfhound") && __instance.DisplayedWeapon.weaponDef.Category != WeaponCategory.Energy)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.WolfhoundNonEnergyPenalty).GetValue();
+                if (mechTags.Contains("BR_MQ_EnergySpecialization") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Energy)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.EnergySpecializationBonus).GetValue();
+                if (mechTags.Contains("BR_MQ_EnergySpecialization") && __instance.DisplayedWeapon.weaponDef.Category != WeaponCategory.Energy)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.EnergySpecializationPenalty).GetValue();
                 if (mechTags.Contains("BR_MQ_Clint") && __instance.DisplayedWeapon.Type == WeaponType.Autocannon)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.ClintAutocannonBonus).GetValue();
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)

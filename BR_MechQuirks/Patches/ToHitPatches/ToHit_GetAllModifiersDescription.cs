@@ -28,10 +28,10 @@ namespace BR_MechQuirks.Patches
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.MongooseLaserAccuracy);
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.SRMAccuracyBoost);
-                if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category == WeaponCategory.Energy)
-                    __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.WolfhoundEnergyBonus);
-                if (mechTags.Contains("BR_MQ_Wolfhound") && weapon.weaponDef.Category != WeaponCategory.Energy)
-                    __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.WolfhoundNonEnergyPenalty);
+                if (mechTags.Contains("BR_MQ_EnergySpecialization") && weapon.weaponDef.Category == WeaponCategory.Energy)
+                    __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.EnergySpecializationBonus);
+                if (mechTags.Contains("BR_MQ_EnergySpecialization") && weapon.weaponDef.Category != WeaponCategory.Energy)
+                    __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.EnergySpecializationPenalty);
                 if (mechTags.Contains("BR_MQ_Clint") && weapon.Type == WeaponType.Autocannon)
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.ClintAutocannonBonus);
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
