@@ -14,5 +14,6 @@ namespace BR_MechQuirks
         public int UrbieToBeHitPenalty = 3;
         public int ValkyrieSpotterBonus = 150;
         public int HollanderRefireBonus = 2;
+        public int FirestarterHeatBonus = 3;
     }
 }

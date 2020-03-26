@@ -76,6 +76,7 @@
     <Compile Include="Core.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModSettings.cs" />
+    <Compile Include="Patches\Class1.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_RefireModifier.cs" />
     <Compile Include="Patches\LOS_GetAllSpotterAbsolutes.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_GetAllModifiers.cs" />
