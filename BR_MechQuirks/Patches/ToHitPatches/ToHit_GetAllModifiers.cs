@@ -25,6 +25,12 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.MongooseLaserAccuracy;
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)
                     __result += (float)Core.Settings.SRMAccuracyBoost;
+
+                //***To-Be-Hit Section Follows*** 
+                var targetName = target.Description.Name;
+
+                if (targetName == "UrbanMech")
+                    __result += (float)Core.Settings.UrbieToBeHitPenalty;
             }
         }
     }

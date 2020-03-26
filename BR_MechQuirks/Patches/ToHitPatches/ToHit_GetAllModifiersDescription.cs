@@ -28,6 +28,12 @@ namespace BR_MechQuirks.Patches
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.MongooseLaserAccuracy);
                 if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.SRMAccuracyBoost);
+
+                //***To-Be-Hit Section Follows*** 
+                var targetName = target.Description.Name;
+
+                if (targetName == "UrbanMech")
+                    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.UrbieToBeHitPenalty);
             }
         }
     }

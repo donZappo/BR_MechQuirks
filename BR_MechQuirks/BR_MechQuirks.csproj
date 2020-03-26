@@ -76,6 +76,7 @@
     <Compile Include="Core.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModSettings.cs" />
+    <Compile Include="Patches\LOS_GetAllSpotterAbsolutes.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_GetAllModifiers.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_GetAllModifiersDescription.cs" />
     <Compile Include="Patches\ToHitPatches\CombatHUDWeaponSlot_SetHitChance.cs" />
