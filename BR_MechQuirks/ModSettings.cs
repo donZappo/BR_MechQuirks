@@ -10,5 +10,6 @@ namespace BR_MechQuirks
 
         public float CommandoBonusDamage = 1.5f;
         public int MongooseLaserAccuracy = -5;
+        public int SRMAccuracyBoost = -4;
     }
 }

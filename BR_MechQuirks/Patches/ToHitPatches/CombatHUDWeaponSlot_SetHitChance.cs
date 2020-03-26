@@ -24,7 +24,8 @@ namespace BR_MechQuirks.Patches
                 var mechTags = actor.GetTags();
                 if (mechTags.Contains("BR_MQ_Mongoose") && __instance.DisplayedWeapon.Type == WeaponType.Laser)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
-
+                if (mechTags.Contains("BR_MQ_SRMAccuracy") && __instance.DisplayedWeapon.Type == WeaponType.SRM)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.SRMAccuracyBoost).GetValue();
             }
         }
     }

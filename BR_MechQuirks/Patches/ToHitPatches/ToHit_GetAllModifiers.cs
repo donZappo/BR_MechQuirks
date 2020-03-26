@@ -20,8 +20,11 @@ namespace BR_MechQuirks.Patches
                     return;
 
                 var mechTags = attacker.GetTags();
+
                 if (mechTags.Contains("BR_MQ_Mongoose") && weapon.Type == WeaponType.Laser)
-                    __result = __result + (float)Core.Settings.MongooseLaserAccuracy;
+                    __result += (float)Core.Settings.MongooseLaserAccuracy;
+                if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)
+                    __result += (float)Core.Settings.SRMAccuracyBoost;
             }
         }
     }
