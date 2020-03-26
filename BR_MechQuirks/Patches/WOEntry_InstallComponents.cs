@@ -20,8 +20,8 @@ namespace BR_MechQuirks.Patches
                 
                 if (mechTags.Contains("BR_MQ_Vindicator"))
                 {
-                    techCost = (int)(techCost * Core.Settings.VindicatorRefitFactor);
-                    cbillCost = (int)(cbillCost * Core.Settings.VindicatorRefitFactor);
+                    techCost = (int)(techCost * Core.Settings.GenericDesignRefitFactor);
+                    cbillCost = (int)(cbillCost * Core.Settings.GenericDesignRefitFactor);
                 }
             }
         }
