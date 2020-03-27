@@ -21,7 +21,7 @@ namespace BR_MechQuirks
         public float EnergySpecializationPenalty = 2;
         public float ClintAutocannonBonus = -4;
         public float VulcanVehicleBonus = -5;
-        public float BlackjackAC2DamageBonus = 4;
+        public float AC2DamageBonus = 4;
         public float GenericDesignRefitFactor = 0.5f;
         public int BombardResolvePenalty = -2;
         public float IntimidatingToBeHitPenalty = 1;
@@ -41,5 +41,6 @@ namespace BR_MechQuirks
         public float AllOrNothingAccuracy = 4.0f;
         public float CommandConsoleFactor = 0.95f;
         public float AdvancedCommandModuleFactor = 0.85f;
+        public float BallisticComputerBonus = -2.0f;
     }
 }

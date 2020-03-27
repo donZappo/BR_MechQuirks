@@ -22,8 +22,8 @@ namespace BR_MechQuirks.Patches
                     __result += Core.Settings.PPCInputLagDamageBonus;
                 if (mechTags.Contains("BR_MQ_PPCInputLag") && __instance.WeaponSubType == WeaponSubType.PPCSnub)
                     __result += Core.Settings.PPCInputLagDamageBonus / __instance.ProjectilesPerShot;
-                if (mechTags.Contains("BR_MQ_Blackjack") && __instance.WeaponSubType == WeaponSubType.AC2)
-                    __result += Core.Settings.BlackjackAC2DamageBonus;
+                if (mechTags.Contains("BR_MQ_AC2DamageBonus") && __instance.WeaponSubType == WeaponSubType.AC2)
+                    __result += Core.Settings.AC2DamageBonus;
                 if (mechTags.Contains("BR_MQ_InfamouslyHot"))
                     __result += Core.Settings.InfamouslyHotDamageBonus / __instance.ProjectilesPerShot;
                 if (mechTags.Contains("BR_MQ_AllOrNothing") && (__instance.WeaponSubType == WeaponSubType.AC20 || 

@@ -43,6 +43,8 @@ namespace BR_MechQuirks.Patches
                 if (mechTags.Contains("BR_MQ_AllOrNothing") && (__instance.DisplayedWeapon.WeaponSubType == WeaponSubType.AC20 ||
                     __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.UAC20 || __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.LB20X))
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AllOrNothingAccuracy).GetValue();
+                if (mechTags.Contains("BR_MQ_BallisticComputer") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Ballistic)
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.BallisticComputerBonus).GetValue();
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;
