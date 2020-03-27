@@ -42,5 +42,7 @@ namespace BR_MechQuirks
         public float CommandConsoleFactor = 0.95f;
         public float AdvancedCommandModuleFactor = 0.85f;
         public float BallisticComputerBonus = -2.0f;
+        public float RareRepairFactor = 2.0f;
+        public float CrabClawDamageFactor = 0.8f;
     }
 }

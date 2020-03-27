@@ -23,6 +23,11 @@ namespace BR_MechQuirks.Patches
                     totalArmorDamage *= Core.Settings.ArmourBaffleFactor;
                     directStructureDamage *= Core.Settings.ArmourBaffleFactor;
                 }
+                if (mechTags.Contains("BR_MQ_CrabClaws") && (aLoc == ArmorLocation.LeftArm || aLoc == ArmorLocation.RightArm))
+                {
+                    totalArmorDamage *= Core.Settings.CrabClawDamageFactor;
+                    directStructureDamage *= Core.Settings.CrabClawDamageFactor;
+                }
             }
         }
     }

@@ -37,7 +37,12 @@ namespace BR_MechQuirks.Patches
                     techCost = (int)(techCost * Core.Settings.NonStandardPartsFactor);
                     cbillCost = (int)(cbillCost * Core.Settings.NonStandardPartsFactor);
                 }
-                
+                if (mechTags.Contains("BR_MQ_Rare"))
+                {
+                    techCost = (int)(techCost * Core.Settings.RareRepairFactor);
+                    cbillCost = (int)(cbillCost * Core.Settings.RareRepairFactor);
+                }
+
             }
         }
     }
