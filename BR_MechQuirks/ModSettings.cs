@@ -37,7 +37,7 @@ namespace BR_MechQuirks
         public float AntiBallisticSleekDesignFactor = 0.8f;
         public float AwesomePPCBonus = -3;
         public float AwesomeNonPPCPenalty = 3;
-        public float AllOrNothingDamage = 1.2f;
+        public float AllOrNothingDamageFactor = 1.2f;
         public float AllOrNothingAccuracy = 4.0f;
     }
 }
