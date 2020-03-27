@@ -39,5 +39,6 @@ namespace BR_MechQuirks
         public float AwesomeNonPPCPenalty = 3;
         public float AllOrNothingDamageFactor = 1.2f;
         public float AllOrNothingAccuracy = 4.0f;
+        public float CommandConsoleFactor = 0.95f;
     }
 }

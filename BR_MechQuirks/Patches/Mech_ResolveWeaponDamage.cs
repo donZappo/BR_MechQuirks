@@ -19,6 +19,8 @@ namespace BR_MechQuirks.Patches
 
                 if (mechTags.Contains("BR_MQ_AntiBallisticSleekDesign") && weaponCategoryValue.IsBallistic)
                     incomingDamage *= Core.Settings.AntiBallisticSleekDesignFactor;
+                if (Methods.TeamHasTag(__instance, "BR_MQ_CommandConsole"))
+                    incomingDamage *= Core.Settings.CommandConsoleFactor;
             }
         }
     }
