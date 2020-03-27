@@ -39,7 +39,9 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.AwesomePPCBonus;
                 if (mechTags.Contains("BR_MQ_AwesomePPC") && weapon.weaponDef.Category != WeaponCategory.Energy)
                     __result += (float)Core.Settings.AwesomeNonPPCPenalty;
-
+                if (mechTags.Contains("BR_MQ_AllOrNothing") && (weapon.weaponDef.WeaponSubType == WeaponSubType.AC20 ||
+                    weapon.weaponDef.WeaponSubType == WeaponSubType.UAC20 || weapon.weaponDef.WeaponSubType == WeaponSubType.LB20X))
+                    __result += (float)Core.Settings.AllOrNothingAccuracy;
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;

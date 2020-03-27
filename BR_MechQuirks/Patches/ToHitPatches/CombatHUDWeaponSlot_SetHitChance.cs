@@ -40,6 +40,9 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AwesomePPCBonus).GetValue();
                 if (mechTags.Contains("BR_MQ_AwesomePPC") && __instance.DisplayedWeapon.weaponDef.Type != WeaponType.PPC)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AwesomeNonPPCPenalty).GetValue();
+                if (mechTags.Contains("BR_MQ_AllOrNothing") && (__instance.DisplayedWeapon.WeaponSubType == WeaponSubType.AC20 ||
+                    __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.UAC20 || __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.LB20X))
+                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AllOrNothingAccuracy).GetValue();
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;
