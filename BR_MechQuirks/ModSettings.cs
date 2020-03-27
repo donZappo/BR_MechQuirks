@@ -32,7 +32,8 @@ namespace BR_MechQuirks
         public float DragonInstabilityFactor = 0.75f;
         public float NonStandardPartsFactor = 1.5f;
         public float MassiveSearchLightTeamBonus = -2.0f;
-        public float InfamouslyHotDamageBonus = -2;
+        public float InfamouslyHotDamageBonus = 2;
         public float InfamouslyHotHeatPenalty = 2;
+        public float AntiBallisticSleekDesignFactor = 0.8f;
     }
 }
