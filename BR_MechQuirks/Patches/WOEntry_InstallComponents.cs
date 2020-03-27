@@ -42,7 +42,11 @@ namespace BR_MechQuirks.Patches
                     techCost = (int)(techCost * Core.Settings.RareRepairFactor);
                     cbillCost = (int)(cbillCost * Core.Settings.RareRepairFactor);
                 }
-
+                if (mechTags.Contains("BR_MQ_MuseumItem"))
+                {
+                    techCost = (int)(techCost * Core.Settings.MuseumItemRepairFactor);
+                    cbillCost = (int)(cbillCost * Core.Settings.MuseumItemRepairFactor);
+                }
             }
         }
     }

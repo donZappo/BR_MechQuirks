@@ -44,5 +44,6 @@ namespace BR_MechQuirks
         public float BallisticComputerBonus = -2.0f;
         public float RareRepairFactor = 2.0f;
         public float CrabClawDamageFactor = 0.8f;
+        public float MuseumItemRepairFactor = 3.0f;
     }
 }
