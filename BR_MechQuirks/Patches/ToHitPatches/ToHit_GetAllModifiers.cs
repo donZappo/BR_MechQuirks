@@ -35,6 +35,11 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.VulcanVehicleBonus;
                 if (Methods.TeamHasTag(attacker, "BR_MQ_MassiveSearchLight"))
                     __result += (float)Core.Settings.MassiveSearchLightTeamBonus;
+                if (mechTags.Contains("BR_MQ_AwesomePPC") && weapon.weaponDef.Type == WeaponType.PPC)
+                    __result += (float)Core.Settings.AwesomePPCBonus;
+                if (mechTags.Contains("BR_MQ_AwesomePPC") && weapon.weaponDef.Category != WeaponCategory.Energy)
+                    __result += (float)Core.Settings.AwesomeNonPPCPenalty;
+
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;

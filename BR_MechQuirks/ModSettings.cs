@@ -35,5 +35,7 @@ namespace BR_MechQuirks
         public float InfamouslyHotDamageBonus = 2;
         public float InfamouslyHotHeatPenalty = 2;
         public float AntiBallisticSleekDesignFactor = 0.8f;
+        public float AwesomePPCBonus = -3;
+        public float AwesomeNonPPCPenalty = 3;
     }
 }
