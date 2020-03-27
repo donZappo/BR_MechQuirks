@@ -40,5 +40,6 @@ namespace BR_MechQuirks
         public float AllOrNothingDamageFactor = 1.2f;
         public float AllOrNothingAccuracy = 4.0f;
         public float CommandConsoleFactor = 0.95f;
+        public float AdvancedCommandModuleFactor = 0.85f;
     }
 }
