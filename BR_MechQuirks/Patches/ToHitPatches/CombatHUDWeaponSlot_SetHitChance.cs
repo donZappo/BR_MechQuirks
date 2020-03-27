@@ -53,6 +53,9 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.UrbieToBeHitPenalty).GetValue();
                 if (targetName == "Huron Warrior")
                     _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.IntimidatingToBeHitPenalty).GetValue();
+                if (targetName == "Atlas")
+                    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.IntimidatingToBeHitPenalty).GetValue();
+
             }
         }
     }

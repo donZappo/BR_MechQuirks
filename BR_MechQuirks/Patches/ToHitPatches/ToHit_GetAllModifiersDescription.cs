@@ -55,6 +55,8 @@ namespace BR_MechQuirks.Patches
                     __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.UrbieToBeHitPenalty);
                 if (targetName == "Huron Warrior")
                     __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
+                if (targetName == "Atlas")
+                    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
             }
         }
     }
