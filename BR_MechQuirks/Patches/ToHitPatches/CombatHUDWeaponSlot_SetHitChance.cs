@@ -34,8 +34,10 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.ClintAutocannonBonus).GetValue();
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.VulcanVehicleBonus).GetValue();
+                if (Methods.TeamHasTag(actor, "BR_MQ_MassiveSearchLight"))
+                    _this.Method("AddToolTipDetail", "TEAM QUIRK", Core.Settings.MassiveSearchLightBonus).GetValue();
 
-                
+
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;
 

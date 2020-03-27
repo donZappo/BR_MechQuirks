@@ -31,5 +31,6 @@ namespace BR_MechQuirks
         public float OmniRefitFactor = 0.0f;
         public float DragonInstabilityFactor = 0.75f;
         public float NonStandardPartsFactor = 1.5f;
+        public float MassiveSearchLightBonus = -2.0f;
     }
 }

@@ -33,6 +33,8 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.ClintAutocannonBonus;
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
                     __result += (float)Core.Settings.VulcanVehicleBonus;
+                if (Methods.TeamHasTag(attacker, "BR_MQ_MassiveSearchLight"))
+                    __result += (float)Core.Settings.MassiveSearchLightBonus;
 
                 //***To-Be-Hit Section Follows*** 
                 var targetName = target.Description.Name;

@@ -10,8 +10,8 @@ namespace BR_MechQuirks.Patches
 {
     class Instability_Reduction_Patch
     {
-        [HarmonyPatch(typeof(Mech), "AddAbsoluteInstability")]
-        public static class Mech_AddAbsoluteInstability_Patch
+        [HarmonyPatch(typeof(Mech), "AddInstability")]
+        public static class Mech_AddInstability_Patch
         {
             public static void Prefix(Mech __instance, ref float amt)
             {
