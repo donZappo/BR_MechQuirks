@@ -80,14 +80,14 @@
     <Compile Include="ModSettings.cs" />
     <Compile Include="Patches\Mech_ResolveWeaponDamage.cs" />
     <Compile Include="Patches\Mech_AddInstability.cs" />
-    <Compile Include="Patches\Class1.cs" />
+    <Compile Include="Patches\ToHit_GetRangeModifierForDist.cs" />
     <Compile Include="Patches\Weapon_MaxRange.cs" />
     <Compile Include="Patches\Mech_DamageLocation.cs" />
     <Compile Include="Patches\Team_CollectUnitBaseline.cs" />
     <Compile Include="Patches\WOEntry_InstallComponents.cs" />
     <Compile Include="Patches\Weapon_HeatGenerated.cs" />
     <Compile Include="Patches\Weapon_HeatDamagePerShot.cs" />
-    <Compile Include="Patches\ToHitPatches\ToHit_RefireModifier.cs" />
+    <Compile Include="Patches\ToHit_RefireModifier.cs" />
     <Compile Include="Patches\LOS_GetAllSpotterAbsolutes.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_GetAllModifiers.cs" />
     <Compile Include="Patches\ToHitPatches\ToHit_GetAllModifiersDescription.cs" />
