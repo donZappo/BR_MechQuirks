@@ -16,7 +16,7 @@ namespace BR_MechQuirks.Patches
         {
             public static void Postfix(ToHit __instance, ref float __result, AbstractActor attacker, Weapon weapon, ICombatant target)
             {
-                if (attacker.UnitType != UnitType.Mech)
+                if (attacker.UnitType != UnitType.Mech || target == null || attacker == null)
                     return;
 
                 var mechTags = attacker.GetTags();
@@ -46,14 +46,14 @@ namespace BR_MechQuirks.Patches
                     __result += (float)Core.Settings.BallisticComputerBonus;
 
                 //***To-Be-Hit Section Follows*** 
-                var targetName = target.Description.Name;
+                //var targetName = target.Description.Name;
 
-                if (targetName == "UrbanMech")
-                    __result += (float)Core.Settings.UrbieToBeHitPenalty;
-                if (targetName == "UrbanMech")
-                    __result += (float)Core.Settings.IntimidatingToBeHitPenalty;
-                if (targetName == "Atlas")
-                    __result += (float)Core.Settings.IntimidatingToBeHitPenalty;
+                //if (targetName == "UrbanMech")
+                //    __result += (float)Core.Settings.UrbieToBeHitPenalty;
+                //if (targetName == "UrbanMech")
+                //    __result += (float)Core.Settings.IntimidatingToBeHitPenalty;
+                //if (targetName == "Atlas")
+                //    __result += (float)Core.Settings.IntimidatingToBeHitPenalty;
             }
         }
     }

@@ -20,7 +20,7 @@ namespace BR_MechQuirks.Patches
             }
             public static void Postfix(ToHit __instance, ref string __result, AbstractActor attacker, Weapon weapon, ICombatant target)
             {
-                if (attacker.UnitType != UnitType.Mech)
+                if (attacker.UnitType != UnitType.Mech || target == null || attacker == null)
                     return;
 
                 var mechTags = attacker.GetTags();
@@ -48,15 +48,17 @@ namespace BR_MechQuirks.Patches
                 if (mechTags.Contains("BR_MQ_BallisticComputer") && weapon.weaponDef.Category == WeaponCategory.Ballistic)
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.BallisticComputerBonus);
 
-                //***To-Be-Hit Section Follows*** 
-                var targetName = target.Description.Name;
+                //***To-Be-Hit Section Follows***
+                //var targetName = target.Description.Name;
+                //if (targetName == null)
+                //    return;
 
-                if (targetName == "UrbanMech")
-                    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.UrbieToBeHitPenalty);
-                if (targetName == "Huron Warrior")
-                    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
-                if (targetName == "Atlas")
-                    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
+                //if (targetName == "UrbanMech")
+                //    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.UrbieToBeHitPenalty);
+                //if (targetName == "Huron Warrior")
+                //    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
+                //if (targetName == "Atlas")
+                //    __result = string.Format("{0}TARGET QUIRK {1:+#;-#}; ", __result, Core.Settings.IntimidatingToBeHitPenalty);
             }
         }
     }

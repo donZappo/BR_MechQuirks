@@ -31,7 +31,7 @@ namespace BR_MechQuirks.Patches
                     cbillCost = (int)(cbillCost * Core.Settings.BushwackerHSComponentFactor);
                 }
                 if (mechTags.Contains("BR_MQ_Omni"))
-                    techCost = (int)(techCost * Core.Settings.OmniRefitFactor);
+                    techCost = (int)(Core.Settings.OmniRefitValue);
                 if (mechTags.Contains("BR_MQ_NonStandardParts"))
                 {
                     techCost = (int)(techCost * Core.Settings.NonStandardPartsFactor);

@@ -28,7 +28,7 @@ namespace BR_MechQuirks
         public float BushwackerHSComponentFactor = 1.5f;
         public float ArmourBaffleFactor = 0.5f;
         public float NARCMaxRangeIncrease = 150.0f;
-        public float OmniRefitFactor = 0.0f;
+        public float OmniRefitValue = 1.0f;
         public float DragonInstabilityFactor = 0.75f;
         public float NonStandardPartsFactor = 1.5f;
         public float MassiveSearchLightTeamBonus = -2.0f;

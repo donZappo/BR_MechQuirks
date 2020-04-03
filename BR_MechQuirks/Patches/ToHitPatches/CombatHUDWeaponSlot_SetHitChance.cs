@@ -18,7 +18,7 @@ namespace BR_MechQuirks.Patches
             {
                 var _this = Traverse.Create(__instance);
                 AbstractActor actor = __instance.DisplayedWeapon.parent;
-                if (actor.UnitType != UnitType.Mech)
+                if (actor.UnitType != UnitType.Mech || actor == null || target == null)
                     return;
 
                 var mechTags = actor.GetTags();
@@ -47,14 +47,14 @@ namespace BR_MechQuirks.Patches
                     _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.BallisticComputerBonus).GetValue();
 
                 //***To-Be-Hit Section Follows*** 
-                var targetName = target.Description.Name;
+                //var targetName = target.Description.Name;
 
-                if (targetName == "UrbanMech")
-                    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.UrbieToBeHitPenalty).GetValue();
-                if (targetName == "Huron Warrior")
-                    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.IntimidatingToBeHitPenalty).GetValue();
-                if (targetName == "Atlas")
-                    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.IntimidatingToBeHitPenalty).GetValue();
+                //if (targetName == "UrbanMech")
+                //    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.UrbieToBeHitPenalty).GetValue();
+                //if (targetName == "Huron Warrior")
+                //    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.IntimidatingToBeHitPenalty).GetValue();
+                //if (targetName == "Atlas")
+                //    _this.Method("AddToolTipDetail", "TARGET QUIRK", Core.Settings.IntimidatingToBeHitPenalty).GetValue();
 
             }
         }
