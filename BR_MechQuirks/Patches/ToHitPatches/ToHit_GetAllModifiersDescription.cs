@@ -16,7 +16,6 @@ namespace BR_MechQuirks.Patches
         {
             public static void Prefix()
             {
-                Logger.Log("It is Prefixing the thing");
             }
             public static void Postfix(ToHit __instance, ref string __result, AbstractActor attacker, Weapon weapon, ICombatant target)
             {

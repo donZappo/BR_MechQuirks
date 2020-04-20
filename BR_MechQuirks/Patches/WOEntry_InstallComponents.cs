@@ -15,10 +15,9 @@ namespace BR_MechQuirks.Patches
             typeof(string), typeof(ChassisLocations), typeof(ChassisLocations), typeof(int), typeof(int), typeof(string) })]
         public static class WorkOrderEntry_InstallComponent_WorkOrderEntry_InstallComponent_Patch
         {
-            public static void Prefix(WorkOrderEntry_InstallComponent __instance, ref int techCost, ref int cbillCost)
+            public static void Prefix(WorkOrderEntry_InstallComponent __instance, ref int techCost, ref int cbillCost, string mechSimGameUID)
             {
-                var mechID = __instance.MechID;
-                var mechTags = UnityGameInstance.BattleTechGame.Simulation.GetMechByID(mechID).MechTags;
+                var mechTags = UnityGameInstance.BattleTechGame.Simulation.GetMechByID(mechSimGameUID).MechTags.ToList();
                 
                 if (mechTags.Contains("BR_MQ_Vindicator"))
                 {
