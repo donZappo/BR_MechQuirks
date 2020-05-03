@@ -17,8 +17,8 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = source.GetTags();
 
-                if (mechTags.Contains("BR_MQ_Valkyrie"))
-                    __result += Core.Settings.ValkyrieSpotterBonus;
+                //if (mechTags.Contains("BR_MQ_Valkyrie"))
+                //    __result += Core.Settings.ValkyrieSpotterBonus;
             }
         }
     }

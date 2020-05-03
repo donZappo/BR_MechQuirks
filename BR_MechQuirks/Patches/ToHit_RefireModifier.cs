@@ -17,12 +17,12 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = weapon.parent.GetTags();
 
-                if (__result != 0)
-                {
-                    if (mechTags.Contains("BR_MQ_RecoilCompensator"))
-                        __result += Core.Settings.RecoilCompensator;
-                    __result = Math.Max(0, __result);
-                }
+                //if (__result != 0)
+                //{
+                //    if (mechTags.Contains("BR_MQ_RecoilCompensator"))
+                //        __result += Core.Settings.RecoilCompensator;
+                //    __result = Math.Max(0, __result);
+                //}
             }
         }
     }

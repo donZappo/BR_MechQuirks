@@ -17,11 +17,11 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = __instance.parent.GetTags();
 
-                if (mechTags.Contains("BR_MQ_PPCInputLag") && __instance.Type == WeaponType.PPC)
-                    __result += Core.Settings.PPCInputLagHeatPenalty * __instance.combat.Constants.Heat.GlobalHeatIncreaseMultiplier * 
-                        ((__instance.parent == null) ? 1f : __instance.parent.StatCollection.GetValue<float>("WeaponHeatMultiplier"));
-                if (mechTags.Contains("BR_MQ_InfamouslyHot"))
-                    __result += Core.Settings.InfamouslyHotHeatPenalty;
+                //if (mechTags.Contains("BR_MQ_PPCInputLag") && __instance.Type == WeaponType.PPC)
+                //    __result += Core.Settings.PPCInputLagHeatPenalty * __instance.combat.Constants.Heat.GlobalHeatIncreaseMultiplier * 
+                //        ((__instance.parent == null) ? 1f : __instance.parent.StatCollection.GetValue<float>("WeaponHeatMultiplier"));
+                //if (mechTags.Contains("BR_MQ_InfamouslyHot"))
+                //    __result += Core.Settings.InfamouslyHotHeatPenalty;
             }
         }
     }

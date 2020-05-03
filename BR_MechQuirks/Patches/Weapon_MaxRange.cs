@@ -17,8 +17,8 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = __instance.parent.GetTags();
 
-                if (mechTags.Contains("BR_MQ_NARCRange") && __instance.WeaponSubType == WeaponSubType.Narc)
-                    __result += Core.Settings.NARCMaxRangeIncrease;
+                //if (mechTags.Contains("BR_MQ_NARCRange") && __instance.WeaponSubType == WeaponSubType.Narc)
+                //    __result += Core.Settings.NARCMaxRangeIncrease;
             }
         }
     }

@@ -17,8 +17,8 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = __instance.GetTags();
 
-                if (mechTags.Contains("BR_MQ_Dragon"))
-                    amt *= Core.Settings.DragonInstabilityFactor;
+                //if (mechTags.Contains("BR_MQ_Dragon"))
+                //    amt *= Core.Settings.DragonInstabilityFactor;
             }
         }
     }

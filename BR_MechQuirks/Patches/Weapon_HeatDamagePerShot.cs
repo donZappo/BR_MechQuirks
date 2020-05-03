@@ -17,8 +17,8 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = __instance.parent.GetTags();
 
-                if (mechTags.Contains("BR_MQ_Firestarter"))
-                    __result += Core.Settings.FirestarterHeatBonus;
+                //if (mechTags.Contains("BR_MQ_Firestarter"))
+                //    __result += Core.Settings.FirestarterHeatBonus;
             }
         }
     }

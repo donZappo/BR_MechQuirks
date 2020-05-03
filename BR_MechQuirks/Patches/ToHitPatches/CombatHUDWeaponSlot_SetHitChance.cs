@@ -22,29 +22,29 @@ namespace BR_MechQuirks.Patches
                     return;
 
                 var mechTags = actor.GetTags();
-                if (mechTags.Contains("BR_MQ_Mongoose") && __instance.DisplayedWeapon.Type == WeaponType.Laser)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
-                if (mechTags.Contains("BR_MQ_SRMAccuracy") && __instance.DisplayedWeapon.Type == WeaponType.SRM)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.SRMAccuracyBoost).GetValue();
-                if (mechTags.Contains("BR_MQ_EnergySpecialization") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Energy)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.EnergySpecializationBonus).GetValue();
-                if (mechTags.Contains("BR_MQ_EnergySpecialization") && __instance.DisplayedWeapon.weaponDef.Category != WeaponCategory.Energy)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.EnergySpecializationPenalty).GetValue();
-                if (mechTags.Contains("BR_MQ_Clint") && __instance.DisplayedWeapon.Type == WeaponType.Autocannon)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.ClintAutocannonBonus).GetValue();
-                //if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
-                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.VulcanVehicleBonus).GetValue();
-                if (Methods.TeamHasTag(actor, "BR_MQ_MassiveSearchLight"))
-                    _this.Method("AddToolTipDetail", "TEAM QUIRK", Core.Settings.MassiveSearchLightTeamBonus).GetValue();
-                if (mechTags.Contains("BR_MQ_AwesomePPC") && __instance.DisplayedWeapon.weaponDef.Type == WeaponType.PPC)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AwesomePPCBonus).GetValue();
-                if (mechTags.Contains("BR_MQ_AwesomePPC") && __instance.DisplayedWeapon.weaponDef.Type != WeaponType.PPC)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AwesomeNonPPCPenalty).GetValue();
-                if (mechTags.Contains("BR_MQ_AllOrNothing") && (__instance.DisplayedWeapon.WeaponSubType == WeaponSubType.AC20 ||
-                    __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.UAC20 || __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.LB20X))
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AllOrNothingAccuracy).GetValue();
-                if (mechTags.Contains("BR_MQ_BallisticComputer") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Ballistic)
-                    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.BallisticComputerBonus).GetValue();
+                if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
+                    _this.Method("AddToolTipDetail", "VULCAN MECH QUIRK", Core.Settings.VulcanVehicleBonus).GetValue();
+                //if (mechTags.Contains("BR_MQ_Mongoose") && __instance.DisplayedWeapon.Type == WeaponType.Laser)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
+                //if (mechTags.Contains("BR_MQ_SRMAccuracy") && __instance.DisplayedWeapon.Type == WeaponType.SRM)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.SRMAccuracyBoost).GetValue();
+                //if (mechTags.Contains("BR_MQ_EnergySpecialization") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Energy)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.EnergySpecializationBonus).GetValue();
+                //if (mechTags.Contains("BR_MQ_EnergySpecialization") && __instance.DisplayedWeapon.weaponDef.Category != WeaponCategory.Energy)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.EnergySpecializationPenalty).GetValue();
+                //if (mechTags.Contains("BR_MQ_Clint") && __instance.DisplayedWeapon.Type == WeaponType.Autocannon)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.ClintAutocannonBonus).GetValue();
+                //if (Methods.TeamHasTag(actor, "BR_MQ_MassiveSearchLight"))
+                //    _this.Method("AddToolTipDetail", "TEAM QUIRK", Core.Settings.MassiveSearchLightTeamBonus).GetValue();
+                //if (mechTags.Contains("BR_MQ_AwesomePPC") && __instance.DisplayedWeapon.weaponDef.Type == WeaponType.PPC)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AwesomePPCBonus).GetValue();
+                //if (mechTags.Contains("BR_MQ_AwesomePPC") && __instance.DisplayedWeapon.weaponDef.Type != WeaponType.PPC)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AwesomeNonPPCPenalty).GetValue();
+                //if (mechTags.Contains("BR_MQ_AllOrNothing") && (__instance.DisplayedWeapon.WeaponSubType == WeaponSubType.AC20 ||
+                //    __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.UAC20 || __instance.DisplayedWeapon.WeaponSubType == WeaponSubType.LB20X))
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.AllOrNothingAccuracy).GetValue();
+                //if (mechTags.Contains("BR_MQ_BallisticComputer") && __instance.DisplayedWeapon.weaponDef.Category == WeaponCategory.Ballistic)
+                //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.BallisticComputerBonus).GetValue();
 
                 //***To-Be-Hit Section Follows*** 
                 //var targetName = target.Description.Name;

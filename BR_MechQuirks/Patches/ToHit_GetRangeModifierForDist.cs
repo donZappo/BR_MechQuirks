@@ -16,8 +16,8 @@ namespace BR_MechQuirks.Patches
             public static void Postfix(Weapon weapon, float dist, ref float __result)
             {
                 var mechTags = weapon.parent.GetTags();
-                if (mechTags.Contains("BR_MQ_NoHonourPPCs") && dist < weapon.MinRange)
-                    __result = 0;
+                //if (mechTags.Contains("BR_MQ_NoHonourPPCs") && dist < weapon.MinRange)
+                //    __result = 0;
             }
         }
     }

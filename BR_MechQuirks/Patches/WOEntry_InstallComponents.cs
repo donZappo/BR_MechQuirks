@@ -19,7 +19,7 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = UnityGameInstance.BattleTechGame.Simulation.GetMechByID(mechSimGameUID).MechTags.ToList();
                 
-                if (mechTags.Contains("BR_MQ_Vindicator"))
+                if (mechTags.Contains("BR_MQ_GenericDesign"))
                 {
                     techCost = (int)(techCost * Core.Settings.GenericDesignRefitFactor);
                     cbillCost = (int)(cbillCost * Core.Settings.GenericDesignRefitFactor);

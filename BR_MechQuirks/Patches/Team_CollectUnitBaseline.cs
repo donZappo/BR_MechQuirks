@@ -15,15 +15,15 @@ namespace BR_MechQuirks.Patches
         {
             private static void Postfix(Team __instance, ref int __result)
             {
-                int BombardCount = 0;
-                foreach (AbstractActor actor in __instance.units)
-                {
-                    var mechTags = actor.GetTags();
+                //int BombardCount = 0;
+                //foreach (AbstractActor actor in __instance.units)
+                //{
+                //    var mechTags = actor.GetTags();
 
-                    if (mechTags.Contains("BR_MQ_Bombard"))
-                        BombardCount++;
-                }
-                __result += BombardCount * Core.Settings.BombardResolvePenalty;
+                //    if (mechTags.Contains("BR_MQ_Bombard"))
+                //        BombardCount++;
+                //}
+                //__result += BombardCount * Core.Settings.BombardResolvePenalty;
             }
         }
     }
