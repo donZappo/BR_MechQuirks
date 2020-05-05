@@ -28,7 +28,7 @@ namespace BR_MechQuirks.Patches
                 //    __result += Core.Settings.InfamouslyHotDamageBonus / __instance.ProjectilesPerShot;
                 //if (mechTags.Contains("BR_MQ_AllOrNothing") && (__instance.WeaponSubType == WeaponSubType.AC20 || 
                 //    __instance.WeaponSubType == WeaponSubType.UAC20 || __instance.WeaponSubType == WeaponSubType.LB20X))
-                    __result *= Core.Settings.AllOrNothingDamageFactor;
+                    //__result *= Core.Settings.AllOrNothingDamageFactor;
             }
         }
     }
