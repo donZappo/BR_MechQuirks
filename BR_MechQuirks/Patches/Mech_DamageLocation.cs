@@ -13,7 +13,7 @@ namespace BR_MechQuirks.Patches
         [HarmonyPatch(typeof(Mech), "DamageLocation")]
         public static class Mech_DamageLocation_Patch
         {
-            public static void Postfix(Mech __instance, int originalHitLoc, ArmorLocation aLoc, Weapon weapon, ref float totalArmorDamage, ref float directStructureDamage)
+            public static void Prefix(Mech __instance, int originalHitLoc, ArmorLocation aLoc, Weapon weapon, ref float totalArmorDamage, ref float directStructureDamage)
             {
                 var mechTags = __instance.GetTags();
 
