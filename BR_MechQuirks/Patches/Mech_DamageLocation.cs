@@ -17,13 +17,13 @@ namespace BR_MechQuirks.Patches
             {
                 var mechTags = __instance.GetTags();
 
-                if (mechTags.Contains("BR_MQ_ArmourBaffleSystem") && (aLoc == ArmorLocation.LeftArm || aLoc == ArmorLocation.RightArm ||
-                    aLoc == ArmorLocation.LeftLeg || aLoc == ArmorLocation.RightLeg))
+                if (mechTags.Contains("BR_MQ_ArmourBaffleSystem") && ((ArmorLocation)originalHitLoc == ArmorLocation.LeftArm || (ArmorLocation)originalHitLoc == ArmorLocation.RightArm ||
+                    (ArmorLocation)originalHitLoc == ArmorLocation.LeftLeg || (ArmorLocation)originalHitLoc == ArmorLocation.RightLeg))
                 {
                     totalArmorDamage *= Core.Settings.ArmourBaffleFactor;
                     directStructureDamage *= Core.Settings.ArmourBaffleFactor;
                 }
-                if (mechTags.Contains("BR_MQ_CrabClaws") && (aLoc == ArmorLocation.LeftArm || aLoc == ArmorLocation.RightArm))
+                if (mechTags.Contains("BR_MQ_CrabClaws") && ((ArmorLocation)originalHitLoc == ArmorLocation.LeftArm || (ArmorLocation)originalHitLoc == ArmorLocation.RightArm))
                 {
                     totalArmorDamage *= Core.Settings.CrabClawDamageFactor;
                     directStructureDamage *= Core.Settings.CrabClawDamageFactor;
