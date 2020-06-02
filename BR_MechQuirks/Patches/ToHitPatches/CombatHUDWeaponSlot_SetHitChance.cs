@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using BattleTech;
 using Harmony;
 using BattleTech.UI;
+using UnityEngine;
+using Localize;
 
 namespace BR_MechQuirks.Patches
 {
@@ -22,8 +24,20 @@ namespace BR_MechQuirks.Patches
                     return;
 
                 var mechTags = actor.GetTags();
-                if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
-                    _this.Method("AddToolTipDetail", "VULCAN MECH QUIRK", Core.Settings.VulcanVehicleBonus).GetValue();
+                if (mechTags.Contains("BR_MQ_Vulcan"))
+                {
+                    var tag = new Text("VULCAN MECH QUIRK", Core.Settings.VulcanVehicleBonus);
+                    if (target.UnitType == UnitType.Vehicle)
+                    {
+                        if (!__instance.ToolTipHoverElement.BuffStrings.Contains(tag))
+                            __instance.ToolTipHoverElement.BuffStrings.Add(tag);
+                    }
+                    else
+                    {
+                        if (__instance.ToolTipHoverElement.BuffStrings.Contains(tag))
+                            __instance.ToolTipHoverElement.BuffStrings.Remove(tag);
+                    }
+                }
                 //if (mechTags.Contains("BR_MQ_Mongoose") && __instance.DisplayedWeapon.Type == WeaponType.Laser)
                 //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
                 //if (mechTags.Contains("BR_MQ_SRMAccuracy") && __instance.DisplayedWeapon.Type == WeaponType.SRM)
