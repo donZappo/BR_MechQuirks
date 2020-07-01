@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BattleTech;
 using Harmony;
+using UnityEngine;
 
 namespace BR_MechQuirks.Patches
 {
@@ -27,6 +28,11 @@ namespace BR_MechQuirks.Patches
                 {
                     totalArmorDamage *= Core.Settings.CrabClawDamageFactor;
                     directStructureDamage *= Core.Settings.CrabClawDamageFactor;
+                }
+                if (__instance.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && __instance.weightClass == WeightClass.LIGHT)
+                {
+                    totalArmorDamage *= 0.8f;
+                    directStructureDamage *= 0.8f;
                 }
             }
         }
