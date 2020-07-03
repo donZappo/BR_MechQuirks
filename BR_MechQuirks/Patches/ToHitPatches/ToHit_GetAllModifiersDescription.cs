@@ -22,9 +22,18 @@ namespace BR_MechQuirks.Patches
                 if (attacker.UnitType != UnitType.Mech || target == null || attacker == null)
                     return;
 
+                var mech = attacker as Mech;
                 var mechTags = attacker.GetTags();
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
                     __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.VulcanVehicleBonus);
+
+                if (attacker.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && mech.weightClass == WeightClass.MEDIUM)
+                {
+                    var pips = attacker.EvasivePipsCurrent;
+                    __result = string.Format("{0}MECH MASTERY {1:+#;-#}; ", __result, (float)pips);
+                }
+
+
                 //if (mechTags.Contains("BR_MQ_Mongoose") && weapon.Type == WeaponType.Laser)
                 //    __result = string.Format("{0}MECH QUIRK {1:+#;-#}; ", __result, Core.Settings.MongooseLaserAccuracy);
                 //if (mechTags.Contains("BR_MQ_SRMAccuracy") && weapon.Type == WeaponType.SRM)

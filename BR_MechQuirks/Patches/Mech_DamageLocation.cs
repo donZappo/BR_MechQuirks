@@ -31,8 +31,9 @@ namespace BR_MechQuirks.Patches
                 }
                 if (__instance.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && __instance.weightClass == WeightClass.LIGHT)
                 {
-                    totalArmorDamage *= 0.8f;
-                    directStructureDamage *= 0.8f;
+                    var pips = __instance.EvasivePipsCurrent;
+                    totalArmorDamage *= 1 - pips * 0.04f;
+                    directStructureDamage *= 1 - pips * 0.04f;
                 }
             }
         }

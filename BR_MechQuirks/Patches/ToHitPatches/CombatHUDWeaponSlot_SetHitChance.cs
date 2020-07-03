@@ -23,6 +23,7 @@ namespace BR_MechQuirks.Patches
                 if (actor.UnitType != UnitType.Mech || actor == null || target == null)
                     return;
 
+                var mech = actor as Mech;
                 var mechTags = actor.GetTags();
                 if (mechTags.Contains("BR_MQ_Vulcan"))
                 {
@@ -37,6 +38,12 @@ namespace BR_MechQuirks.Patches
                         if (__instance.ToolTipHoverElement.BuffStrings.Contains(tag))
                             __instance.ToolTipHoverElement.BuffStrings.Remove(tag);
                     }
+                }
+                if (actor.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && mech.weightClass == WeightClass.MEDIUM)
+                {
+                    var tag = new Text("MECH MASTERY", (float)actor.EvasivePipsCurrent)
+                    if (!__instance.ToolTipHoverElement.BuffStrings.Contains(tag))
+                        __instance.ToolTipHoverElement.BuffStrings.Add(tag);
                 }
                 //if (mechTags.Contains("BR_MQ_Mongoose") && __instance.DisplayedWeapon.Type == WeaponType.Laser)
                 //    _this.Method("AddToolTipDetail", "MECH QUIRK", Core.Settings.MongooseLaserAccuracy).GetValue();
