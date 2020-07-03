@@ -41,7 +41,7 @@ namespace BR_MechQuirks.Patches
                 }
                 if (actor.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && mech.weightClass == WeightClass.MEDIUM)
                 {
-                    var tag = new Text("MECH MASTERY", (float)actor.EvasivePipsCurrent)
+                    var tag = new Text("MECH MASTERY", (float)actor.EvasivePipsCurrent);
                     if (!__instance.ToolTipHoverElement.BuffStrings.Contains(tag))
                         __instance.ToolTipHoverElement.BuffStrings.Add(tag);
                 }
