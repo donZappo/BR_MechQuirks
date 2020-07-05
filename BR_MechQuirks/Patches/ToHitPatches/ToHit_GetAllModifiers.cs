@@ -24,11 +24,6 @@ namespace BR_MechQuirks.Patches
                 if (mechTags.Contains("BR_MQ_Vulcan") && target.UnitType == UnitType.Vehicle)
                     __result += (float)Core.Settings.VulcanVehicleBonus;
 
-                if (attacker.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && mech.weightClass == WeightClass.MEDIUM)
-                {
-                    var pips = attacker.EvasivePipsCurrent;
-                    __result += (float)(pips);
-                }
 
                 //if (mechTags.Contains("BR_MQ_Mongoose") && weapon.Type == WeaponType.Laser)
                 //    __result += (float)Core.Settings.MongooseLaserAccuracy;

@@ -29,11 +29,11 @@ namespace BR_MechQuirks.Patches
                     totalArmorDamage *= Core.Settings.CrabClawDamageFactor;
                     directStructureDamage *= Core.Settings.CrabClawDamageFactor;
                 }
-                if (__instance.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && __instance.weightClass == WeightClass.LIGHT)
+                if (__instance.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite") && __instance.weightClass == WeightClass.MEDIUM)
                 {
                     var pips = __instance.EvasivePipsCurrent;
-                    totalArmorDamage *= 1 - pips * 0.04f;
-                    directStructureDamage *= 1 - pips * 0.04f;
+                    totalArmorDamage *= 1 - pips * 0.05f;
+                    directStructureDamage *= 1 - pips * 0.05f;
                 }
             }
         }
