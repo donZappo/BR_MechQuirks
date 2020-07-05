@@ -20,6 +20,13 @@ namespace BR_MechQuirks.Patches
                 if (mechTags.Contains("BR_MQ_AntiBallisticSleekDesign") && weaponCategoryValue.IsBallistic)
                     incomingDamage *= Core.Settings.AntiBallisticSleekDesignFactor;
 
+                if (__instance.UnitType == UnitType.Mech)
+                {
+                    var mech = __instance as Mech;
+                    if (mech.weightClass == WeightClass.ASSAULT && __instance.GetPilot().pilotDef.PilotTags.Contains("PQ_pilot_elite"))
+                        __instance.StatCollection.Set<float>("CriticalHitChanceReceivedMultiplier", 0.4f);
+                }
+
                 //var CommandConsole = Methods.TeamHasTag(__instance, "BR_MQ_CommandConsole");
                 //var AdvancedCommandModule = Methods.TeamHasTag(__instance, "BR_MQ_AdvancedCommandModule");
                 //if (CommandConsole || AdvancedCommandModule)
