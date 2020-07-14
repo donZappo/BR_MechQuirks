@@ -35,6 +35,14 @@ namespace BR_MechQuirks.Patches
                     totalArmorDamage *= 1 - pips * 0.05f;
                     directStructureDamage *= 1 - pips * 0.05f;
                 }
+                if (__instance.GetPilot().pilotDef.SkillGuts >= 5)
+                {
+                    float gutsBonus = (__instance.GetPilot().pilotDef.SkillGuts - 4) * 0.02f;
+                    if (__instance.GetPilot().pilotDef.SkillGuts >= 10)
+                        gutsBonus += 0.03f;
+                    totalArmorDamage *= 1 - gutsBonus;
+                    directStructureDamage *= 1 - gutsBonus;
+                }
             }
         }
     }
